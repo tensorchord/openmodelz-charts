@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: {{ template "openmodelz.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    component: agent
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: agent
+  namespace: {{ .Release.Namespace | quote }}
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: agent
+            port:
+              number: 8080
+        path: /(.*)
+        pathType: Prefix
