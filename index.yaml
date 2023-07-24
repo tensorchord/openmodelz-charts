@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  openmodelz:
+  - apiVersion: v2
+    appVersion: v0.0.8
+    created: "2023-07-24T15:03:34.205798944+08:00"
+    description: A Helm chart for Kubernetes
+    digest: aa67875c555464883f74aab9acb4b0fea68804bb15e9833a64181311b0b98062
+    name: openmodelz
+    type: application
+    urls:
+    - https://github.com/tensorchord/openmodelz-charts/releases/download/openmodelz-0.0.2/openmodelz-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-07-24T15:03:33.796024943+08:00"
+    description: A Helm chart for Kubernetes
+    digest: e08eacb04da559bea63a957fb4bc84b209bb791fdbcd3f9d326ae91c3c0f9338
+    name: openmodelz
+    type: application
+    urls:
+    - https://github.com/tensorchord/openmodelz-charts/releases/download/openmodelz-0.0.1/openmodelz-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-07-24T15:03:34.205812684+08:00"
