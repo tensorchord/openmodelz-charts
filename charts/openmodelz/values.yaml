@@ -96,6 +96,7 @@ modelzetes:
       cpu: "1000m"
       memory: "3Gi"
   imagePullPolicy: "IfNotPresent"    # Image pull policy for deployed inferences
+  setRuntimeClassNvidia: true  # set "runtimeClassName: nvidia" for GPU deployments
   httpProbe: true              # Setting to true will use HTTP for readiness and liveness probe on function pods
   readinessProbe:
     initialDelaySeconds: 2
