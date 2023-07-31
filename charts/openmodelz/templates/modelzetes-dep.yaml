@@ -47,8 +47,10 @@ spec:
         env:
           - name: MODELZETES_INFERENCE_IMAGE_PULL_POLICY
             value: {{ .Values.modelzetes.imagePullPolicy | quote }}
+          {{- if .Values.modelzetes.setRuntimeClassNvidia }}
           - name: MODELZETES_INFERENCE_SET_UP_RUNTIME_CLASS_NVIDIA
-            value: {{ .Values.modelzetes.setRuntimeClassNvidia }}
+            value: "true"
+          {{- end }}
           - name: MODELZETES_PROBE_READINESS_INITIAL_DELAY_SECONDS
             value: "{{ .Values.modelzetes.readinessProbe.initialDelaySeconds }}"
           - name: MODELZETES_PROBE_READINESS_TIMEOUT_SECONDS
