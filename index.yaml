@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   openmodelz:
   - apiVersion: v2
+    appVersion: v0.0.20
+    created: "2023-08-02T15:55:06.49149394+08:00"
+    description: A Helm chart for OpenModelZ
+    digest: 1304a7ddbf08fbd13d1eb9264e1eed4fdb0ce5fd63e67f2b2bdb089deeed0e98
+    name: openmodelz
+    type: application
+    urls:
+    - https://github.com/tensorchord/openmodelz-charts/releases/download/openmodelz-0.0.12/openmodelz-0.0.12.tgz
+    version: 0.0.12
+  - apiVersion: v2
     appVersion: v0.0.15
     created: "2023-08-01T17:01:33.524942792+08:00"
     description: A Helm chart for OpenModelZ
@@ -111,4 +121,4 @@ entries:
     urls:
     - https://github.com/tensorchord/openmodelz-charts/releases/download/openmodelz-0.0.1/openmodelz-0.0.1.tgz
     version: 0.0.1
-generated: "2023-08-01T17:01:36.588530194+08:00"
+generated: "2023-08-02T15:55:08.697191338+08:00"
