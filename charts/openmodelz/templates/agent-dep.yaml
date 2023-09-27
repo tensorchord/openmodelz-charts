@@ -122,6 +122,24 @@ spec:
         - name: MODELZ_AGENT_INGRESS_DOMAIN
           value: "{{ .Values.agent.ingress.domain }}"
         {{- end }}
+        - name: MODELZ_AGENT_MODELZ_CLOUD_ENABLED
+          value: {{ .Values.agent.modelzCloud.enabled | quote }}
+        - name: MODELZ_AGENT_MODELZ_CLOUD_URL
+          value: {{ .Values.agent.modelzCloud.url | quote }}
+        - name: MODELZ_CLOUD_AGENT_TOKEN
+          value: {{ .Values.agent.modelzCloud.token | quote }}
+        - name: MODELZ_CLOUD_AGENT_HEARTBEAT_INTERVAL
+          value: {{ .Values.agent.modelzCloud.heartbeatInterval | quote }}
+        - name: MODELZ_CLOUD_AGENT_REGION
+          value: {{ .Values.agent.modelzCloud.region | quote }}
+        - name: MODELZ_CLOUD_AGENT_UNIFIED_API_KEY
+          value: {{ .Values.agent.modelzCloud.unifiedApiKey | quote }}
+        - name: MODELZ_UPSTREAM_TIMEOUT
+          value: {{ .Values.agent.modelzCloud.upstreamTimeout | quote }}
+        - name: MODELZ_MAX_IDLE_CONNECTIONS
+          value: {{ .Values.agent.modelzCloud.maxIdleConns | quote }}
+        - name: MODELZ_MAX_IDLE_CONNECTIONS_PER_HOST
+          value: {{ .Values.agent.modelzCloud.maxIdleConnsPerHost | quote }}
         {{- if .Values.basicAuth }}
         - name: basic_auth
           value: "true"

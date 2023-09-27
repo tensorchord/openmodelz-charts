@@ -124,6 +124,16 @@ agent:
   replicas: 1
   # change the port when creating multiple releases in the same baremetal cluster
   nodePort: 31112
+  modelzCloud:
+    enabled: false
+    url: "https://cloud.modelz.ai"
+    token: ""
+    heartbeatInterval: 60s
+    region: "us-central1"
+    unifiedApiKey: ""
+    upstreamTimeout: 300s
+    maxIdleConns: 1024
+    maxIdleConnsPerHost: 1024
 
   resources:
     requests:
