@@ -151,4 +151,8 @@ entries:
     urls:
     - https://github.com/tensorchord/openmodelz-charts/releases/download/openmodelz-0.0.1/openmodelz-0.0.1.tgz
     version: 0.0.1
+<<<<<<< HEAD
 generated: "2023-09-27T11:24:04.091375034+08:00"
+=======
+generated: "2023-09-27T10:37:54.029854203+08:00"
+>>>>>>> origin/gh-pages
