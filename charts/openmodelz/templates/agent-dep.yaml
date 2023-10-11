@@ -106,8 +106,6 @@ spec:
           value: "9090"
         - name: MODELZ_AGENT_METRICS_PROMETHEUS_HOST
           value: "prometheus.{{ .Release.Namespace }}"
-        - name: MODELZ_AGENT_EVENT_ENABLED
-          value: "false"
         {{- if .Values.agent.ingress.enabled }}
         - name: MODELZ_AGENT_INGRESS_ENABLED
           value: "true"
@@ -123,6 +121,8 @@ spec:
           value: "{{ .Values.agent.ingress.domain }}"
         {{- end }}
         - name: MODELZ_AGENT_MODELZ_CLOUD_ENABLED
+          value: {{ .Values.agent.modelzCloud.enabled | quote }}
+        - name: MODELZ_AGENT_MODELZ_CLOUD_EVENT_ENABLED
           value: {{ .Values.agent.modelzCloud.enabled | quote }}
         - name: MODELZ_AGENT_MODELZ_CLOUD_URL
           value: {{ .Values.agent.modelzCloud.url | quote }}
